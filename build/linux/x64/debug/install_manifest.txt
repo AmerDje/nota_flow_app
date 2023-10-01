@@ -1,0 +1,15 @@
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/nota_flow_app
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/assets/fonts/Poppins-Regular.ttf
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/logo.png
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/logo_on_letters.png
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/amer/FlutterProjects/nota_flow_app/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
