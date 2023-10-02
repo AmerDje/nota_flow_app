@@ -115,7 +115,7 @@ class NoteCardTile extends StatelessWidget {
 //                   subtitle: Padding(
 //                     padding: const EdgeInsets.symmetric(vertical: 16.0),
 //                     child: Text(
-//                       'Build Your Career with Thereat Same',
+//                       'Bla Bla Bla Bla',
 //                       style: TextStyle(
 //                           fontSize: 16, color: Colors.black.withOpacity(0.5)),
 //                     ),
