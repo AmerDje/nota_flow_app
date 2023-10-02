@@ -1,4 +1,4 @@
-#Sun Oct 01 02:09:15 CET 2023
+#Mon Oct 02 18:02:20 CET 2023
 base.0=/home/amer/FlutterProjects/nota_flow_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

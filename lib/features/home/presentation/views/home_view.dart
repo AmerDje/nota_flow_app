@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nota_flow_app/features/home/presentation/views/widgets/home_view_body.dart';
+import 'package:nota_flow_app/features/home/presentation/views/widgets/note_bottom_sheet.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -22,11 +24,11 @@ class HomeView extends StatelessWidget {
                         topRight: Radius.circular(16))),
                 context: context,
                 builder: (BuildContext context) {
-                  return const Scaffold();
+                  return const NoteBottomSheet();
                 });
           },
           child: const Icon(Icons.add),
         ),
-        body: const SafeArea(child: Scaffold()));
+        body: const SafeArea(child: HomeViewBody()));
   }
 }
