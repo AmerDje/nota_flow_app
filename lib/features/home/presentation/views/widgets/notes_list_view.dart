@@ -21,14 +21,16 @@ class NotesListView extends StatelessWidget {
             ),
           );
         } else {
-          return ListView.builder(
-              physics: const BouncingScrollPhysics(),
-              itemCount: notesList.length,
-              itemBuilder: ((context, index) {
-                return NoteCardTile(
-                  note: notesList[index],
-                );
-              }));
+          return Expanded(
+            child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                itemCount: notesList.length,
+                itemBuilder: ((context, index) {
+                  return NoteCardTile(
+                    note: notesList[index],
+                  );
+                })),
+          );
         }
       },
     );

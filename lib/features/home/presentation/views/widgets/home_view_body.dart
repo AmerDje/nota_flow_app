@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
                 title: 'Notes List',
                 onPressed: () {},
               )),
-          const Expanded(child: NotesListView())
+          const NotesListView()
         ],
       ),
     );

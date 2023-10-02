@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
-import 'package:intl/intl.dart';
 import 'package:nota_flow_app/core/utils/components/custom_button.dart';
 import 'package:nota_flow_app/core/utils/components/custom_text_field.dart';
+import 'package:nota_flow_app/core/utils/extensions/date_extension.dart';
 import 'package:nota_flow_app/core/utils/helpers/show_snack_bar.dart';
 import 'package:nota_flow_app/features/home/models/note_model.dart';
 import 'package:nota_flow_app/features/home/presentation/cubit/notes_cubit.dart';
@@ -96,8 +96,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                       NoteModel note = NoteModel(
                           noteTitle: noteTitle!,
                           noteBody: noteBody!,
-                          date: DateFormat('MMMM dd, yyyy')
-                              .format(DateTime.now()),
+                          date: DateTime.now().formatDate(),
                           color: currentColor.value);
                       BlocProvider.of<NotesCubit>(context).addNote(note);
 
@@ -116,6 +115,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
     });
   }
 
+//..........
   Color pickerColor = const Color(0xff443a49);
   Color currentColor = const Color.fromARGB(0, 0, 0, 0);
 
