@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/components/custom_app_bar.dart';
-import 'package:notes_app/models/note_model.dart';
-
-import '../../../components/custom_text_field.dart';
-import '../../../cubits/notes_cubit/notes_cubit.dart';
-import '../../home/widgets/note_bottom_sheet.dart';
+import 'package:nota_flow_app/core/utils/components/custom_app_bar.dart';
+import 'package:nota_flow_app/core/utils/components/custom_text_field.dart';
+import 'package:nota_flow_app/features/home/models/note_model.dart';
+import 'package:nota_flow_app/features/home/presentation/cubit/notes_cubit.dart';
+import 'package:nota_flow_app/features/home/presentation/views/widgets/note_bottom_sheet.dart';
 
 class EditNoteViewBody extends StatefulWidget {
   const EditNoteViewBody({super.key});

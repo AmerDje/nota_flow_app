@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/utils/page_animation_transition.dart';
-import 'package:notes_app/views/home/widgets/notes_list_view.dart';
-
-import '../../../components/custom_app_bar.dart';
-import 'hooks_form.dart';
+import 'package:nota_flow_app/core/utils/components/custom_app_bar.dart';
+import 'package:nota_flow_app/features/home/presentation/views/widgets/notes_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
@@ -19,10 +16,7 @@ class HomeViewBody extends StatelessWidget {
               child: CustomAppBar(
                 icon: Icons.search,
                 title: 'Notes List',
-                onPressed: () {
-                  Navigator.push(context,
-                      PageTransitionAnimation(widget: const HooksForm()));
-                },
+                onPressed: () {},
               )),
           const Expanded(child: NotesListView())
         ],

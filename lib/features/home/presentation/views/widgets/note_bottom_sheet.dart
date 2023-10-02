@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
+import 'package:nota_flow_app/core/utils/components/custom_button.dart';
+import 'package:nota_flow_app/core/utils/components/custom_text_field.dart';
 import 'package:nota_flow_app/core/utils/helpers/show_snack_bar.dart';
 import 'package:nota_flow_app/features/home/models/note_model.dart';
 import 'package:nota_flow_app/features/home/presentation/cubit/notes_cubit.dart';
-import 'package:intl/intl.dart';
 
 class NoteBottomSheet extends StatelessWidget {
   const NoteBottomSheet({
