@@ -29,7 +29,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
           children: [
             CustomAppBar(
               icon: Icons.check,
-              title: 'Edit Note',
+              title: const Text('Edit Note',style: TextStyle(fontSize:25),),
               onPressed: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();

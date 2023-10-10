@@ -4,7 +4,7 @@ import 'package:nota_flow_app/core/utils/components/search_button.dart';
 class CustomAppBar extends StatelessWidget {
   final IconData icon;
 
-  final String title;
+  final Widget title;
 
   final VoidCallback? onPressed;
 
@@ -19,11 +19,7 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Image.asset(
-          title,
-          height: 60,
-          width: 150,
-        ),
+        title,
         SearchButton(
           icon: icon,
           onPressed: onPressed,
