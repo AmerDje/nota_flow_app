@@ -16,7 +16,7 @@ class NotesListView extends StatelessWidget {
         if (notesList!.isEmpty) {
           return const Center(
             child: Text(
-              "There is no No Notes",
+              "There is No Notes",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.normal),
             ),
           );
