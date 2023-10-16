@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nota_flow_app/core/utils/extensions/navigation_extension.dart';
-import 'package:nota_flow_app/core/utils/helpers/show_snack_bar.dart';
+import 'package:nota_flow_app/core/extensions/navigation_extension.dart';
+import 'package:nota_flow_app/core/helpers/show_snack_bar.dart';
 import 'package:nota_flow_app/features/edit%20note/presentation/views/edit_note_view.dart';
 import 'package:nota_flow_app/features/home/models/note_model.dart';
 import 'package:nota_flow_app/features/home/presentation/cubit/notes_cubit.dart';

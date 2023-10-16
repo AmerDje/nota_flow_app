@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nota_flow_app/core/utils/components/custom_app_bar.dart';
-import 'package:nota_flow_app/core/utils/components/custom_text_field.dart';
+import 'package:nota_flow_app/core/components/custom_app_bar.dart';
+import 'package:nota_flow_app/core/components/custom_text_field.dart';
 import 'package:nota_flow_app/features/edit%20note/presentation/views/widgets/colors_list_view.dart';
 import 'package:nota_flow_app/features/home/models/note_model.dart';
 import 'package:nota_flow_app/features/home/presentation/cubit/notes_cubit.dart';
@@ -29,7 +29,10 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
           children: [
             CustomAppBar(
               icon: Icons.check,
-              title: const Text('Edit Note',style: TextStyle(fontSize:25),),
+              title: const Text(
+                'Edit Note',
+                style: TextStyle(fontSize: 25),
+              ),
               onPressed: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();

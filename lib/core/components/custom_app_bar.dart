@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nota_flow_app/core/utils/components/search_button.dart';
+import 'package:nota_flow_app/core/components/search_button.dart';
 
 class CustomAppBar extends StatelessWidget {
   final IconData icon;

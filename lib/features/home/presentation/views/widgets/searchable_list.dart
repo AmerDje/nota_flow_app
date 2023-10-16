@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nota_flow_app/core/utils/assets.dart';
-import 'package:nota_flow_app/core/utils/components/custom_app_bar.dart';
+import 'package:nota_flow_app/core/components/custom_app_bar.dart';
 import 'package:nota_flow_app/features/home/models/note_model.dart';
 import 'package:nota_flow_app/features/home/presentation/views/widgets/note_card_tile.dart';
 import 'package:nota_flow_app/features/home/presentation/views/widgets/notes_search_field.dart';
