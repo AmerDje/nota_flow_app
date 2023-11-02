@@ -23,59 +23,62 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
     NoteModel oldNote = ModalRoute.of(context)?.settings.arguments as NoteModel;
     return Padding(
       padding: const EdgeInsets.all(15.0),
-      child: Form(
-        key: formKey,
-        child: Column(
-          children: [
-            CustomAppBar(
-              icon: Icons.check,
-              title: const Text(
-                'Edit Note',
-                style: TextStyle(fontSize: 25),
+      child: SingleChildScrollView(
+        child: Form(
+          key: formKey,
+          child: Column(
+            children: [
+              CustomAppBar(
+                icon: Icons.check,
+                title: const Text(
+                  'Edit Note',
+                  style: TextStyle(fontSize: 25),
+                ),
+                onPressed: () {
+                  if (formKey.currentState!.validate()) {
+                    formKey.currentState!.save();
+                    Color? noteColor =
+                        BlocProvider.of<NotesCubit>(context).noteColor;
+                    oldNote.noteTitle = noteTitle!;
+                    oldNote.noteBody = noteBody!;
+                    oldNote.color = noteColor?.value ?? oldNote.color;
+                    oldNote.save();
+                    BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+                    Navigator.pop(context);
+                  } else {
+                    autovalidateMode = AutovalidateMode.always;
+                    setState(() {});
+                  }
+                },
               ),
-              onPressed: () {
-                if (formKey.currentState!.validate()) {
-                  formKey.currentState!.save();
-                  Color? noteColor =
-                      BlocProvider.of<NotesCubit>(context).noteColor;
-                  oldNote.noteTitle = noteTitle!;
-                  oldNote.noteBody = noteBody!;
-                  oldNote.color = noteColor?.value ?? oldNote.color;
-                  oldNote.save();
-                  BlocProvider.of<NotesCubit>(context).fetchAllNotes();
-                  Navigator.pop(context);
-                } else {
-                  autovalidateMode = AutovalidateMode.always;
-                  setState(() {});
-                }
-              },
-            ),
-            const Spacer(flex: 2),
-            CustomTextField(
-              initialValue: oldNote.noteTitle,
-              maxLines: 1,
-              text: 'Note Title',
-              onSaved: (value) {
-                noteTitle = value;
-              },
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            CustomTextField(
-              initialValue: oldNote.noteBody,
-              maxLines: 5,
-              text: 'Note Body',
-              onSaved: (value) {
-                noteBody = value;
-              },
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            const ColorsListView(),
-            const Spacer(flex: 10),
-          ],
+              const SizedBox(
+                height: 30,
+              ),
+              CustomTextField(
+                initialValue: oldNote.noteTitle,
+                maxLines: 1,
+                text: 'Note Title',
+                onSaved: (value) {
+                  noteTitle = value;
+                },
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              CustomTextField(
+                initialValue: oldNote.noteBody,
+                maxLines: 5,
+                text: 'Note Body',
+                onSaved: (value) {
+                  noteBody = value;
+                },
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              const ColorsListView(),
+            ],
+          ),
         ),
       ),
     );
