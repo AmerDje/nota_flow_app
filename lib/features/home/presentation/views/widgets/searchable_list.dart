@@ -63,7 +63,7 @@ class _SearchableNoteListState extends State<SearchableNoteList> {
             physics: const BouncingScrollPhysics(),
             itemCount: filteredNotesList.length,
             itemBuilder: ((context, index) {
-              return NoteCardTile(note: filteredNotesList[index]);
+              return NoteCardTile(note: widget.notesList[index]);
             }),
           ),
         ),
