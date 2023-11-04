@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nota_flow_app/core/utils/assets.dart';
 import 'package:nota_flow_app/core/components/custom_app_bar.dart';
 import 'package:nota_flow_app/features/home/models/note_model.dart';
+import 'package:nota_flow_app/features/home/presentation/cubit/notes_cubit.dart';
 import 'package:nota_flow_app/features/home/presentation/views/widgets/note_card_tile.dart';
 import 'package:nota_flow_app/features/home/presentation/views/widgets/notes_search_field.dart';
 
@@ -13,14 +15,14 @@ class SearchableNoteList extends StatefulWidget {
 }
 
 class _SearchableNoteListState extends State<SearchableNoteList> {
-  List<NoteModel> filteredNotesList = [];
-
   TextEditingController searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    filteredNotesList.addAll(widget.notesList);
+    BlocProvider.of<NotesCubit>(context)
+        .filteredNotesList
+        ?.addAll(widget.notesList);
   }
 
   bool isFirst = false;
@@ -61,9 +63,12 @@ class _SearchableNoteListState extends State<SearchableNoteList> {
         Expanded(
           child: ListView.builder(
             physics: const BouncingScrollPhysics(),
-            itemCount: filteredNotesList.length,
+            itemCount:
+                BlocProvider.of<NotesCubit>(context).filteredNotesList?.length,
             itemBuilder: ((context, index) {
-              return NoteCardTile(note: widget.notesList[index]);
+              return NoteCardTile(
+                  note: BlocProvider.of<NotesCubit>(context)
+                      .filteredNotesList![index]);
             }),
           ),
         ),
@@ -72,13 +77,15 @@ class _SearchableNoteListState extends State<SearchableNoteList> {
   }
 
   void filterNotes(String query) {
-    filteredNotesList.clear();
+    BlocProvider.of<NotesCubit>(context).filteredNotesList?.clear();
     if (query.isEmpty) {
-      filteredNotesList.addAll(widget.notesList);
+      BlocProvider.of<NotesCubit>(context)
+          .filteredNotesList
+          ?.addAll(widget.notesList);
     } else {
       for (var note in widget.notesList) {
         if (note.noteTitle.toLowerCase().contains(query.toLowerCase())) {
-          filteredNotesList.add(note);
+          BlocProvider.of<NotesCubit>(context).filteredNotesList?.add(note);
         }
       }
     }

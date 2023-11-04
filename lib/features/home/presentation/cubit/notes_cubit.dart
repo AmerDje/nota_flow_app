@@ -11,6 +11,7 @@ part 'notes_state.dart';
 class NotesCubit extends Cubit<NotesState> {
   NotesCubit() : super(NotesInitial());
   Color? noteColor;
+  List<NoteModel>? filteredNotesList = [];
   void addNote(NoteModel note) async {
     emit(NotesLoading());
     try {

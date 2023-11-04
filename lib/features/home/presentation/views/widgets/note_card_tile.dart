@@ -57,6 +57,9 @@ class NoteCardTile extends StatelessWidget {
                 ),
                 onPressed: () {
                   note.delete();
+                  BlocProvider.of<NotesCubit>(context)
+                      .filteredNotesList
+                      ?.remove(note);
                   BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                   showSnackBar(context, 'Note Deleted');
                 },
